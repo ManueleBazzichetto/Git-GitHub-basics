@@ -1,0 +1,15 @@
+---
+title: "Git & GitHub"
+author: "Manuele Bazzichetto"
+format: 
+  revealjs:
+    self-contained: true
+    slide-number: true
+    enableEmoji: true
+---
+
+## Connect to GitHub: SSH key
+
+#### Make sure you properly set up a SSH key to connect your local machine and GitHub account
+
+You can follow instructions [here](https://youtu.be/RGOj5yH7evk?t=1231) and/or [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)
