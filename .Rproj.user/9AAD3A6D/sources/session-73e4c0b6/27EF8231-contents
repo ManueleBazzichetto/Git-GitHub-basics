@@ -12,4 +12,43 @@ format:
 
 #### Make sure you properly set up a SSH key to connect your local machine and GitHub account
 
-You can follow instructions [here](https://youtu.be/RGOj5yH7evk?t=1231) and/or [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)
+To do that, follow instructions [here](https://youtu.be/RGOj5yH7evk?t=1231) and/or [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)
+
+The SSH key creates a secured link between your local machine and the remote repo (e.g. on GitHub)
+
+You'll need a .ssh folder where to store passkeys. It's likely that such a folder already exists on your machine.
+
+## From local to remote (GitHub) - 1
+
+After creating a project (folder) on your local machine, you can link it to GitHub by using the following Git commands:
+
+- _project.folder_ **git init** -> this initializes the repo (use **git init -b main** to initialize master branch as main)
+
+- _project.folder_ **git status** -> this shows un-tracked files (these are not 'monitored' by Git)
+
+- _project.folder_ **git add** (followed by either specific files or a dot which means *all*) -> this tells Git which files to track
+
+- _project.folder_ **git commit** -m "Message" -> this saves files (it commits the changes)
+
+## From local to remote (GitHub) - 2
+
+Before **pushing** your commits to a remote repo, you'll need to create an **EMPTY** repo on GitHub. The repo must be completely empty to be able to push commits without pulling from the remote repo before!
+
+After creating the **EMPTY** repo, you'll have to add a remote connection using the following command:
+
+- _project.folder_ **git remote add origin** [INCLUDE REPO SSH CODE]"
+
+## From local to remote (GitHub) - 3
+
+To double-check the remote repo to which I connected the local repo, you can run this command:
+
+- _project.folder_ **git remote -v**
+
+You should see the SSH's string printed
+
+If all worked fine, it's possible to push commits to the origin:
+
+- _project.folder_ **git push origin main** -> push commits to main (or master - to check the branch name use **git branch**)
+
+
+
